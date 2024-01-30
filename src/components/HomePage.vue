@@ -8,16 +8,24 @@
         <div class="titleCorner">Ichthus Utrecht</div>
       </div>
       <div class="menu-item">Vereniging</div>
+
       <div class="menu-item">Activiteiten</div>
       <div class="menu-item">Over</div>
       <div class="menu-item">Lid worden</div>
       <div class="menu-item">Leden</div>
+      <NavigatieKnop tekst = "Leden"/>
     </div>
     Welkom bij Ichthus Utrecht!
   </div>
 </template>
 
-<script>
+
+<script setup>
+// Hier importeren we de componenten die we nodig hebben
+import NavigatieKnop from './interactief/NavigatieKnop.vue'
+</script>
+<!-- Waarom is dit 'script' terwijl de tutorials steeds 'script setup' gebruiken?-->
+<script> 
 export default {
   name: 'HomePage',
   props: {
