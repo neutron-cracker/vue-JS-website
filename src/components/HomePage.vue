@@ -13,7 +13,7 @@
       <div class="menu-item">Over</div>
       <div class="menu-item">Lid worden</div>
       <div class="menu-item">Leden</div>
-      <NavigatieKnop tekst = "Leden"/>
+      <NavigatieKnop tekst = "Leden" koppeling = "https://ichthusutrecht.churchbook.nl"/>
     </div>
     Welkom bij Ichthus Utrecht!
   </div>

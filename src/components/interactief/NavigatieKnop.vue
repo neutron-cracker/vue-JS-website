@@ -1,8 +1,9 @@
 <script setup>
-defineProps(['tekst'])
+ // eslint-disable-next-line
+defineProps(['tekst', 'koppeling'])
 </script>
 
 
 <template>
-    <a class="koppeling">{{ tekst }}</a>
+    <a class="koppeling" :href="koppeling">{{ tekst }}</a>
 </template>
