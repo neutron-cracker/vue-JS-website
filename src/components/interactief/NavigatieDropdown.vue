@@ -12,9 +12,8 @@ function wisselen() {
 </script>
 
 <template>
-    Waarom zie ik hier niks
     <div class="dropdown">
-        <a class="uitklapknop" href="#" @click="wisselen">{{ tekst }}</a>
+        <a class="uitklapknop" href="#" @hover="wisselen">{{ tekst }}</a>
         <div class="dropdowninhoud" v-if="uitgeklapt"> <!-- De inhoud van de dropdown wordt alleen weergegeven als hij uitgeklapt is -->
             {{ inhoud }} Dit moet nog aangepast worden.
         </div>
@@ -22,3 +21,15 @@ function wisselen() {
 
 
 </template>
+
+
+<style scoped>
+/* Dit is momenteel gekopieerd uit NavigatieKnop.vue; als deze af is kijken of we het beide in een component kunnen zetten die hergebruikt wordt, of misschien stylen in een ander component */
+a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+</style>
