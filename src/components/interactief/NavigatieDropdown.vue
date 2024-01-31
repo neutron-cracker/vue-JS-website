@@ -13,7 +13,7 @@ function wisselen() {
 
 <template>
     <div class="dropdown">
-        <a class="uitklapknop" href="#" @hover="wisselen">{{ tekst }}</a>
+        <a class="uitklapknop" href="#" @click="wisselen">{{ tekst }}</a>
         <div class="dropdowninhoud" v-if="uitgeklapt"> <!-- De inhoud van de dropdown wordt alleen weergegeven als hij uitgeklapt is -->
             {{ inhoud }} Dit moet nog aangepast worden.
         </div>
