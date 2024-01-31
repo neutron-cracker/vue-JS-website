@@ -8,7 +8,6 @@
         <div class="titleCorner">Ichthus Utrecht</div>
       </div>
       <div class="menu-item">Vereniging</div>
-
       <NavigatieDropdown tekst = "Activiteiten"/>
       <div class="menu-item">Over</div>
       <div class="menu-item">Lid worden</div>
@@ -22,6 +21,7 @@
 <script setup>
 // Hier importeren we de componenten die we nodig hebben
 import NavigatieKnop from './interactief/NavigatieKnop.vue'
+import NavigatieDropdown from './interactief/NavigatieDropdown.vue'
 </script>
 <!-- Waarom is dit 'script' terwijl de tutorials steeds 'script setup' gebruiken?-->
 <script> 
