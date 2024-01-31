@@ -9,10 +9,9 @@
       </div>
       <div class="menu-item">Vereniging</div>
 
-      <div class="menu-item">Activiteiten</div>
+      <NavigatieDropdown tekst = "Activiteiten"/>
       <div class="menu-item">Over</div>
       <div class="menu-item">Lid worden</div>
-      <div class="menu-item">Leden</div>
       <NavigatieKnop tekst = "Leden" koppeling = "https://ichthusutrecht.churchbook.nl"/>
     </div>
     Welkom bij Ichthus Utrecht!
