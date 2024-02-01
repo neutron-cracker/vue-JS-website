@@ -11,11 +11,6 @@ const uitgeklapt = ref(false) // Houdt bij of de uitklapknop is uitgeklapt of ni
 function wisselen() {
     uitgeklapt.value = !uitgeklapt.value
 }
-const inhoudtijdelijk = ref([
-    { tekst: 'Agenda', koppeling: 'agenda'},
-    { tekst: 'Geloof', koppeling: 'activiteiten-geloof'},
-    { tekst: 'Praktisch', koppeling: 'activiteiten-praktisch'}
-])
 
 </script>
 
@@ -23,7 +18,7 @@ const inhoudtijdelijk = ref([
     <div class="dropdown">
         <a class="uitklapknop" href="#" @click="wisselen">{{ tekst }}</a>
         <div class="dropdowninhoud" v-if="uitgeklapt"> <!-- De inhoud van de dropdown wordt alleen weergegeven als hij uitgeklapt is -->
-            <NavigatieKnop v-for="knop in inhoudtijdelijk" :key="knop.tekst" :tekst="knop.tekst" :koppeling="knop.koppeling"/> 
+            <NavigatieKnop v-for="knop in inhoud.value" :key="knop.tekst" :tekst="knop.tekst" :koppeling="knop.koppeling"/> 
         </div>
     </div>
 
@@ -32,7 +27,6 @@ const inhoudtijdelijk = ref([
 
 
 <style scoped>
-
 
 .dropdowninhoud {
     position: absolute; /* Zorg ervoor dat de inhoud onder de knop terechtkomt en de knop niet van plek veranderd */

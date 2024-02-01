@@ -8,7 +8,11 @@
         <div class="titleCorner">Ichthus Utrecht</div>
       </div>
       <div class="menu-item">Vereniging</div>
-      <NavigatieDropdown tekst = "Activiteiten" />
+      <NavigatieDropdown tekst = "Activiteiten" :inhoud="ref([
+    { tekst: 'Agenda', koppeling: 'agenda'},
+    { tekst: 'Geloof', koppeling: 'activiteiten-geloof'},
+    { tekst: 'Praktisch', koppeling: 'activiteiten-praktisch'}
+])"/>
       <div class="menu-item">Over</div>
       <div class="menu-item">Lid worden</div>
       <NavigatieKnop tekst = "Leden" koppeling = "https://ichthusutrecht.churchbook.nl"/>
@@ -22,6 +26,8 @@
 // Hier importeren we de componenten die we nodig hebben
 import NavigatieKnop from './interactief/NavigatieKnop.vue'
 import NavigatieDropdown from './interactief/NavigatieDropdown.vue'
+
+import { ref } from 'vue'
 </script>
 <!-- Waarom is dit 'script' terwijl de tutorials steeds 'script setup' gebruiken?-->
 <script> 
