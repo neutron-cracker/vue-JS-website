@@ -17,9 +17,11 @@ function wisselen() {
 <template>
     <div class="dropdown">
         <a class="uitklapknop" href="#" @click="wisselen">{{ tekst }}</a>
-        <div class="dropdowninhoud" v-if="uitgeklapt"> <!-- De inhoud van de dropdown wordt alleen weergegeven als hij uitgeklapt is -->
-            <NavigatieKnop v-for="knop in inhoud.value" :key="knop.tekst" :tekst="knop.tekst" :koppeling="knop.koppeling"/> 
-        </div>
+        <ul class="dropdowninhoud" v-if="uitgeklapt"> <!-- De inhoud van de dropdown wordt alleen weergegeven als hij uitgeklapt is -->
+            <li v-for="knop in inhoud.value" :key="knop.tekst"> <!-- We gebruiken een lijst om de knoppen onder elkaar weer te geven -->
+                <NavigatieKnop class="inhoudsknop" :tekst="knop.tekst" :koppeling="knop.koppeling"/>
+            </li>
+        </ul>
     </div>
 
 
@@ -30,6 +32,9 @@ function wisselen() {
 
 .dropdowninhoud {
     position: absolute; /* Zorg ervoor dat de inhoud onder de knop terechtkomt en de knop niet van plek veranderd */
+    list-style-type: none; /* Geen bolletjes bij de opties */
+    padding: 0px;
+    margin: 20px;
 }
 
 /* Dit is momenteel gekopieerd uit NavigatieKnop.vue; als deze af is kijken of we het beide in een component kunnen zetten die hergebruikt wordt, of misschien stylen in een ander component */
