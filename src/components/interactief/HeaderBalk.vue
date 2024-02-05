@@ -14,16 +14,32 @@ import { ref } from 'vue'
         <div class="menu-item">
         <div class="titleCorner">Ichthus Utrecht</div>
         </div>
-        <div class="menu-item">Vereniging</div>
+        <div class="menu-item">
+            <NavigatieDropdown tekst = "Vereniging" :inhoud="ref([
+                { tekst: 'Bestuur', koppeling: 'bestuur'},
+                { tekst: 'Jaarthema', koppeling: 'jaarthema'},
+                { tekst: 'Waar wij voor staan', koppeling: 'visie-missie'},
+                { tekst: 'Geschiedenis', koppeling: 'geschiedenis'}
+            ])"/>
+        </div>
         <div class="menu-item">
             <NavigatieDropdown tekst = "Activiteiten" :inhoud="ref([
-        { tekst: 'Agenda', koppeling: 'agenda'},
-        { tekst: 'Geloof', koppeling: 'activiteiten-geloof'},
-        { tekst: 'Praktisch', koppeling: 'activiteiten-praktisch'}
+                { tekst: 'Agenda', koppeling: 'agenda'},
+                { tekst: 'Geloof', koppeling: 'activiteiten-geloof'},
+                { tekst: 'Praktisch', koppeling: 'activiteiten-praktisch'}
         ])"/>
         </div>
-        <div class="menu-item">Over</div>
-        <div class="menu-item">Lid worden</div>
+        <div class="menu-item">
+            <NavigatieDropdown tekst = "Over" :inhoud="ref([
+                { tekst: 'Extern', koppeling: 'extern'},
+                { tekst: 'Vrienden van Ichthus', koppeling: 'vrienden'},
+                { tekst: 'Adverteren', koppeling: 'adverteren'},
+                { tekst: 'Contact', koppeling: 'contact'}
+            ])"/>
+        </div>
+        <div class="menu-item">
+            <NavigatieKnop tekst = "Lid worden" koppeling = "lid-worden"/>
+        </div>
         <div class="menu-item">
             <NavigatieKnop tekst = "Leden" koppeling = "https://ichthusutrecht.churchbook.nl"/>
         </div>
