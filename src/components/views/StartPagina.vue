@@ -2,7 +2,7 @@
   <div class="home">
     <div class="menu">
       <div class="menu-item">
-        <img src="../assets/images/icons/ichthus-logo-red.png" class="logo">
+        <img src="../../assets/images/icons/ichthus-logo-red.png" class="logo">
       </div>
       <div class="menu-item">
         <div class="titleCorner">Ichthus Utrecht</div>
