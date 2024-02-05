@@ -3,6 +3,7 @@ import { ref } from 'vue'
 
 import NavigatieKnop from './NavigatieKnop.vue'
 
+// eslint-disable-next-line
 defineProps(['tekst', 'inhoud'])
 // 'tekst' is wat weergegeven wordt op de uitklapknop, 'inhoud' is een lijst met paren van knoptitels en koppelingen
 

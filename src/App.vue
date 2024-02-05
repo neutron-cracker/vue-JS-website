@@ -1,18 +1,8 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <HomePage msg="Welcome to Your Vue.js App"/>
+  <router-view /> <!-- De router mag de view laten zien -->
 </template>
 
-<script>
-import HomePage from './components/HomePage.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HomePage
-  }
-}
-</script>
 
 <style>
 #app {
