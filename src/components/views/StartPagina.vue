@@ -24,8 +24,8 @@
 
 <script setup>
 // Hier importeren we de componenten die we nodig hebben
-import NavigatieKnop from './interactief/NavigatieKnop.vue'
-import NavigatieDropdown from './interactief/NavigatieDropdown.vue'
+import NavigatieKnop from '../interactief/NavigatieKnop.vue'
+import NavigatieDropdown from '../interactief/NavigatieDropdown.vue'
 
 import { ref } from 'vue'
 </script>
