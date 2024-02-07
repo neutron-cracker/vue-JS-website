@@ -41,8 +41,10 @@ function inklappen() {
 .dropdowninhoud {
     position: absolute; /* Zorg ervoor dat de inhoud onder de knop terechtkomt en de knop niet van plek veranderd */
     list-style-type: none; /* Geen bolletjes bij de opties */
+    /* padding gebruiken ipv margin zodat mouseleave niet triggert bij de witruimte */
     padding: 0px;
-    margin-top: 0px;
+    padding-top: 20px;
+    margin: 0px;
     text-align: left;
 }
 
