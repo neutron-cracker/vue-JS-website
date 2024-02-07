@@ -1,3 +1,7 @@
+<script setup>
+import HeaderBalk from '../../interactief/HeaderBalk.vue'
+</script>
+
 <template>
-    <p>Hoi.</p>
+    <HeaderBalk />
 </template>
