@@ -12,15 +12,19 @@ defineProps({
 
 const uitgeklapt = ref(false) // Houdt bij of de uitklapknop is uitgeklapt of niet
 
-function wisselen() {
-    uitgeklapt.value = !uitgeklapt.value
+function uitklappen() {
+    uitgeklapt.value = true
+}
+
+function inklappen() {
+    uitgeklapt.value = false
 }
 
 </script>
 
 <template>
     <div class="dropdown">
-        <a class="uitklapknop" href="#" @click="wisselen">{{ tekst }}</a>
+        <a class="uitklapknop" href="#" @mouseover="uitklappen" @mouseleave="inklappen">{{ tekst }}</a>
         <ul class="dropdowninhoud" v-if="uitgeklapt"> <!-- De inhoud van de dropdown wordt alleen weergegeven als hij uitgeklapt is -->
             <li v-for="knop in inhoud.value" :key="knop.tekst"> <!-- We gebruiken een lijst om de knoppen onder elkaar weer te geven -->
                 <NavigatieKnop class="inhoudsknop" :tekst="knop.tekst" :koppeling="knop.koppeling"/>
