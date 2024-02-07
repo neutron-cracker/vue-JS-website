@@ -51,7 +51,4 @@ a {
     color: #2c3e50;
     text-decoration: none;
 }
-a:hover {
-    text-decoration: underline;
-}
 </style>
