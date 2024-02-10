@@ -14,10 +14,20 @@ const routes = [
     path: "/activiteiten-geloof",
     name: "GeloofPagina",
     component: GeloofPagina,
+    meta: {
+      titel: "Geloof",
+    },
   }
 ]
 
 
 const router = createRouter({history: createWebHistory(), routes})
+
+router.beforeEach((to) => { // html-title instellen
+  if ('titel' in to.meta)
+    document.title = to.meta.titel + ' | Ichthus Utrecht'
+  else
+    document.title = 'Ichthus Utrecht'
+})
 
 export default router
